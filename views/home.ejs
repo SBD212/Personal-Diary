@@ -1,0 +1,15 @@
+<%- include('partials/header')  -%> 
+
+<h1> Home </h1>
+<p> <%= firstPost %> </p>
+    
+    <% if (myPosts.length !== 0) { %>
+        <% for( let index = 0; index < myPosts.length; index++ ) { %>
+            <h1> <%= myPosts[index].title %>  </h1> 
+            <p> <%= myPosts[index].content %>  <a href='/posts/<%= myPosts[index]._id %>'> Read More</a> </p> 
+        
+        <% } %>
+    <% } %>
+   
+
+<%- include('partials/footer')  -%> 
